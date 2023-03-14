@@ -1,22 +1,23 @@
 import { Notification } from "components/Notification/Notification"
+import { Section, Div, List, ListItem, Heading } from "./StatisticsStyled"
 
 
 export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
-    return (<section>
-       <div>
-        <h2>
-          Statistics
-        </h2>
-        {total() === 0 
-                ? <Notification message="There is no feedback"/>
-                : <ul>
-                    <li>Good: {good}</li>
-                    <li>Neutral: {neutral}</li>
-                    <li>Bad: {bad}</li>
-                    <li>Total: {total()}</li>
-                    <li>Positive feedback: {positivePercentage()}%</li>
-                 </ul>
-            }
-        </div>
-      </section>)
+  return (<Section>
+    <Div>
+      <Heading>
+        Statistics
+      </Heading>
+      {total() === 0
+        ? <Notification message="There is no feedback" />
+        : <List>
+          <ListItem><span>Good:</span> {good}</ListItem>
+          <ListItem><span>Neutral:</span> {neutral}</ListItem>
+          <ListItem><span>Bad:</span> {bad}</ListItem>
+          <ListItem><span>Total:</span> {total()}</ListItem>
+          <ListItem><span>Positive feedback:</span> {positivePercentage()}%</ListItem>
+        </List>
+      }
+    </Div>
+  </Section>)
 }
