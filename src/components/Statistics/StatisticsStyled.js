@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-  margin: 20px 0;
-`;
 
 export const Div = styled.div`
   background-color: #fff;
@@ -11,10 +8,6 @@ export const Div = styled.div`
   
 `;
 
-export const Heading = styled.h2`
-  font-size: 24px;
-  margin: 0 0 20px;
-`;
 
 export const List = styled.ul`
   list-style: none;

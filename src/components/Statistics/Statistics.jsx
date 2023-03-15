@@ -1,13 +1,10 @@
 import { Notification } from "components/Notification/Notification"
-import { Section, Div, List, ListItem, Heading } from "./StatisticsStyled"
+import { Div, List, ListItem } from "./StatisticsStyled"
 
 
 export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
-  return (<Section>
+  return (
     <Div>
-      <Heading>
-        Statistics
-      </Heading>
       {total() === 0
         ? <Notification message="There is no feedback" />
         : <List>
@@ -19,5 +16,5 @@ export const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
         </List>
       }
     </Div>
-  </Section>)
+  )
 }
