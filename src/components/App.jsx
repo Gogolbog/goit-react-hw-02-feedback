@@ -10,24 +10,6 @@ class App extends Component {
     bad: 0,
   };
 
-  handleGoodClick = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
-
-  handleNeutralClick = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-
-  handleBadClick = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
-  };
-
   countTotalFeedback = () => {
     const options = Object.values(this.state);
     return options.reduce((acc, option) => (acc += option), 0);
